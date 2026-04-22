@@ -105,6 +105,12 @@
 
         /* Problem Section specifics */
         .problem-quote { font-size: 1.5rem; font-weight: 600; color: var(--accent-red); border-left: 4px solid var(--accent-red); padding-left: 24px; margin: 40px 0; }
+
+        /* Team Section specifics */
+        .team-section { background: var(--surface-color); padding: 80px 40px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-top: 60px; }
+        .team-list { list-style: none; margin-top: 32px; }
+        .team-list li { margin-bottom: 16px; padding-left: 24px; position: relative; font-size: 1.1rem; color: var(--text-muted); }
+        .team-list li::before { content: "→"; color: var(--primary); position: absolute; left: 0; font-weight: bold; }
         
         /* Footer */
         footer { background: var(--surface-color); border-top: 1px solid var(--border-color); padding: 80px 0 40px 0; text-align: center; }
@@ -128,16 +134,16 @@
     <div class="container">
         <nav>
             <a href="#" class="logo">Lyslle.</a>
-            <a href="mailto:ankitkaushik@lyslle.com,cerenokar@lyslle.com" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.875rem;">Contact Us</a>
+            <a href="mailto:hello@lyslle.com" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.875rem;">Contact Us</a>
         </nav>
     </div>
 
     <header class="hero container">
-        <span class="tagline">Immutable. Replayable. Regulator-Ready.</span>
-        <h1>The Compliance Infrastructure for the Agentic Enterprise</h1>
-        <p class="lead">Lyslle is the black box recorder for AI agents in finance. We capture, archive, and replay the full reasoning context of every decision in a WORM-compliant graph.</p>
+        <span class="tagline">Immutable. Replayable. Regulator-Ready. [cite: 3]</span>
+        <h1>The Compliance Infrastructure for the Agentic Enterprise [cite: 2]</h1>
+        <p class="lead">Lyslle is the black box recorder for AI agents in finance. [cite: 25] We capture, archive, and replay the full reasoning context of every decision in a WORM-compliant graph. [cite: 26]</p>
         <div class="hero-actions">
-            <a href="mailto:ankitkaushik@lyslle.com,cerenokar@lyslle.com" class="btn">Talk to the Founders</a>
+            <a href="mailto:hello@lyslle.com" class="btn">Talk to the Founders</a>
         </div>
     </header>
 
@@ -145,66 +151,130 @@
         <section>
             <h2>The execution gap.</h2>
             <div class="problem-quote">
-                "The SEC calls. Your AI agent made 10,000 trades last quarter. Can you explain a single one?"
+                "The SEC calls. Your AI agent made 10,000 trades last quarter. Can you explain a single one?" [cite: 9, 10, 11]
             </div>
             <div class="grid-3">
                 <div>
                     <h3>Agents scale instantly.</h3>
-                    <p style="color: var(--text-muted);">Agents trade, lend, and score risk faster than humans can supervise. 86% of financial firms expect major AI agent growth.</p>
+                    <p style="color: var(--text-muted);">Agents trade, lend, and score risk faster than humans can supervise. [cite: 16] 86% of financial firms expect major AI agent growth. [cite: 15]</p>
                 </div>
                 <div>
                     <h3>Oversight is blind.</h3>
-                    <p style="color: var(--text-muted);">Current tools log the output, not the reasoning. When regulators ask 'why,' no one has an answer.</p>
+                    <p style="color: var(--text-muted);">Current tools log the output, not the reasoning. [cite: 19] When regulators ask 'why,' no one has an answer. [cite: 20]</p>
                 </div>
                 <div>
                     <h3>Regulators are here.</h3>
-                    <p style="color: var(--text-muted);">SEC & FINRA classify AI as supervised technology. FINRA 24-09 mandates traceable AI decisions.</p>
+                    <p style="color: var(--text-muted);">SEC & FINRA classify AI as supervised technology. [cite: 22] FINRA 24-09 mandates traceable AI decisions. [cite: 22]</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>The flight recorder for AI.</h2>
-            <p class="lead" style="margin-left: 0; text-align: left;">Lyslle proves exactly why every decision was made.</p>
+            <h2>The flight recorder for AI. [cite: 27]</h2>
+            <p class="lead" style="margin-left: 0; text-align: left;">Lyslle proves exactly why every decision was made. [cite: 27]</p>
             
             <div class="grid-3">
                 <div class="card">
-                    <span class="step-number">01 Capture</span>
+                    <span class="step-number">01 Capture [cite: 28]</span>
                     <h3>Real-time telemetry</h3>
-                    <p>Embedded in the agent execution path. Captures reasoning chains, policy evaluations, and overrides as they happen.</p>
+                    <p>Embedded in the agent execution path. [cite: 29] Captures reasoning chains, policy evaluations, and overrides as they happen. [cite: 29]</p>
                 </div>
                 <div class="card">
-                    <span class="step-number">02 Archive</span>
+                    <span class="step-number">02 Archive [cite: 30]</span>
                     <h3>Immutable graph</h3>
-                    <p>WORM-compliant temporal graph with cryptographic signing. Every decision becomes an SEC 17a-4 compliant artifact.</p>
+                    <p>WORM-compliant temporal graph with cryptographic signing. [cite: 31] Every decision becomes an SEC 17a-4 compliant artifact. [cite: 31]</p>
                 </div>
                 <div class="card">
-                    <span class="step-number">03 Replay</span>
+                    <span class="step-number">03 Replay [cite: 32]</span>
                     <h3>Audit reconstruction</h3>
-                    <p>Full state reconstruction at any past moment. Regulators replay any decision exactly as it occurred.</p>
+                    <p>Full state reconstruction at any past moment. [cite: 33] Regulators replay any decision exactly as it occurred. [cite: 33]</p>
                 </div>
             </div>
         </section>
 
         <div class="highlight-box">
-            <h2>Observability is debugging.<br>Lyslle is legal defense.</h2>
-            <p style="margin-top: 24px;">Observability tools tell you if your agent failed today. Lyslle proves to the SEC why your agent made a specific trade three years ago.</p>
+            <h2>Observability is debugging.<br>Lyslle is legal defense. [cite: 66]</h2>
+            <p style="margin-top: 24px;">Observability tools tell you if your agent failed today. [cite: 65] Lyslle proves to the SEC why your agent made a specific trade three years ago. [cite: 65]</p>
             <div style="margin-top: 40px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; color: #9ca3af; font-weight: 600;">
-                <span>✓ SEC Rule 17a-4(f)</span>
-                <span>✓ FINRA Rule 3110</span>
-                <span>✓ OCC SR 11-7</span>
+                <span>✓ SEC Rule 17a-4(f) [cite: 56]</span>
+                <span>✓ FINRA Rule 3110 [cite: 58]</span>
+                <span>✓ OCC SR 11-7 [cite: 59]</span>
             </div>
         </div>
 
         <section>
-            <h2 style="text-align: center;">Four steps. Zero disruption.</h2>
+            <h2 style="text-align: center;">Four steps. Zero disruption. [cite: 39]</h2>
             <div class="grid-4">
                 <div class="card" style="padding: 32px 24px; text-align: center;">
-                    <span class="step-number">Step 1</span>
-                    <h3 style="font-size: 1.25rem;">Agent Executes</h3>
-                    <p style="font-size: 0.95rem;">AI agent makes a decision in trading, risk, or compliance.</p>
+                    <span class="step-number">Step 01 [cite: 40]</span>
+                    <h3 style="font-size: 1.25rem;">Agent Executes [cite: 41, 42]</h3>
+                    <p style="font-size: 0.95rem;">AI agent makes a decision in trading, risk, or compliance. [cite: 43, 44, 45]</p>
                 </div>
                 <div class="card" style="padding: 32px 24px; text-align: center;">
-                    <span class="step-number">Step 2</span>
-                    <h3 style="font-size: 1.25rem;">Lyslle Intercepts</h3>
-                    <p style="font-size: 0.95rem;">Embedded in
+                    <span class="step-number">Step 02 [cite: 46]</span>
+                    <h3 style="font-size: 1.25rem;">Lyslle Intercepts [cite: 46, 47]</h3>
+                    <p style="font-size: 0.95rem;">Embedded in execution path—zero latency, captures full context. [cite: 48]</p>
+                </div>
+                <div class="card" style="padding: 32px 24px; text-align: center;">
+                    <span class="step-number">Step 03 [cite: 49]</span>
+                    <h3 style="font-size: 1.25rem;">Graph Archived [cite: 50]</h3>
+                    <p style="font-size: 0.95rem;">Signed, timestamped, written to immutable WORM graph. [cite: 51]</p>
+                </div>
+                <div class="card" style="padding: 32px 24px; text-align: center;">
+                    <span class="step-number">Step 04 [cite: 52]</span>
+                    <h3 style="font-size: 1.25rem;">Audit Replay [cite: 53, 54]</h3>
+                    <p style="font-size: 0.95rem;">Any decision fully reconstructed at any future moment. [cite: 55]</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align: center;">Why Not Build In-House? [cite: 116]</h2>
+            <p class="lead" style="text-align: center;">The structural and technical impediments to internal compliance tools. [cite: 117]</p>
+            <div class="grid-4">
+                <div class="card">
+                    <span class="step-number">01 Separation of Duties [cite: 118]</span>
+                    <p>Under OCC SR 11-7, the team that builds AI agents cannot also validate their compliance. [cite: 119] Regulators require an independent validator. [cite: 121]</p>
+                </div>
+                <div class="card">
+                    <span class="step-number">02 The Focus Problem [cite: 122]</span>
+                    <p>Compliance infrastructure is never a customer's core mission. [cite: 123] Internal builds get deprioritized when revenue projects compete for engineers. [cite: 123]</p>
+                </div>
+                <div class="card">
+                    <span class="step-number">03 Expertise Gap [cite: 124]</span>
+                    <p>Requires deep knowledge of LLM architectures, WORM-compliant archival, temporal graphs, and the regulatory exam process. [cite: 125]</p>
+                </div>
+                <div class="card">
+                    <span class="step-number">04 Regulatory Velocity [cite: 126]</span>
+                    <p>Keeping up with FINRA 24-09, EU AI Act, and continuous regulatory updates requires singular focus. [cite: 127, 128]</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="team-section">
+                <h2>Built by experts at the intersection of AI and compliance.</h2>
+                <p style="font-size: 1.2rem; color: var(--text-muted); margin-top: 16px;">Our team sits at the exact intersection of AI infrastructure and financial regulation compliance. [cite: 191] We bring together a unique blend of builder experience and regulatory exam fluency.</p>
+                <ul class="team-list">
+                    <li><strong>AI Lineage & Infrastructure:</strong> Deep expertise building GenAI lineage infrastructure, model cataloging, and deployment tracking at <strong>Google DeepMind</strong>. [cite: 194, 195, 199]</li>
+                    <li><strong>AI Strategy & Research:</strong> Experience developing AI-powered platforms in collaboration with <strong>OpenAI</strong> at <strong>Wharton</strong>, understanding both LLM agent capabilities and institutional requirements. [cite: 205, 206]</li>
+                    <li><strong>Financial Remediation:</strong> 15+ years leading financial systems transformation, navigating complex regulatory landscapes, and running compliance exam preparation for banks. [cite: 203, 204]</li>
+                    <li><strong>RegTech Archival:</strong> Proven background in building enterprise financial compliance infrastructure for regulated communications. [cite: 197, 198]</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <h2>Ready to secure your AI agents?</h2>
+            <div class="contact-links">
+                <a href="mailto:hello@lyslle.com">hello@lyslle.com</a>
+            </div>
+            <p class="copyright">&copy; 2026 Lyslle. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
