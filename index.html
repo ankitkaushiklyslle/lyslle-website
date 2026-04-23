@@ -39,4 +39,242 @@
 
         /* Navigation */
         nav { 
-            display
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 24px 0; 
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.05em; color: var(--text-main); text-decoration: none; }
+
+        /* Buttons */
+        .btn { 
+            display: inline-block; 
+            background-color: var(--primary); 
+            color: white; 
+            padding: 14px 28px; 
+            border-radius: var(--radius-pill); 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover { background-color: var(--primary-hover); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+        .btn-outline { background-color: transparent; border: 2px solid var(--border-color); color: var(--text-main); }
+        .btn-outline:hover { background-color: #f3f4f6; box-shadow: none; transform: none; }
+
+        /* Typography Styles */
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 24px; }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
+        h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; }
+        p.lead { font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 40px auto; }
+        
+        /* Hero Section */
+        .hero { text-align: center; padding: 120px 0 80px 0; }
+        .hero .tagline { display: inline-block; background: #e0e7ff; color: var(--primary); font-weight: 600; font-size: 0.875rem; padding: 6px 16px; border-radius: var(--radius-pill); margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .hero-actions { display: flex; justify-content: center; gap: 16px; margin-top: 40px; }
+
+        /* Cards Grid */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 48px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 48px; }
+        
+        .card { 
+            background: var(--surface-color); 
+            padding: 40px 32px; 
+            border-radius: var(--radius-lg); 
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+        .card .step-number { font-size: 0.875rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; display: block; }
+        .card p { color: var(--text-muted); font-size: 1.05rem; }
+
+        /* Highlight Section */
+        .highlight-box { 
+            background: #111827; 
+            color: white; 
+            padding: 80px 40px; 
+            border-radius: 24px; 
+            text-align: center; 
+            margin: 60px 0;
+        }
+        .highlight-box h2 { color: white; }
+        .highlight-box p { color: #9ca3af; font-size: 1.25rem; max-width: 600px; margin: 0 auto; }
+
+        /* Problem Section specifics */
+        .problem-quote { font-size: 1.5rem; font-weight: 600; color: var(--accent-red); border-left: 4px solid var(--accent-red); padding-left: 24px; margin: 40px 0; }
+
+        /* Team Section specifics */
+        .team-section { background: var(--surface-color); padding: 80px 40px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-top: 60px; }
+        .team-list { list-style: none; margin-top: 32px; }
+        .team-list li { margin-bottom: 16px; padding-left: 24px; position: relative; font-size: 1.1rem; color: var(--text-muted); }
+        .team-list li::before { content: "→"; color: var(--primary); position: absolute; left: 0; font-weight: bold; }
+        
+        /* Footer */
+        footer { background: var(--surface-color); border-top: 1px solid var(--border-color); padding: 80px 0 40px 0; text-align: center; }
+        footer h2 { font-size: 2rem; margin-bottom: 24px; }
+        .contact-links { display: flex; justify-content: center; gap: 32px; margin: 32px 0; flex-wrap: wrap; }
+        .contact-links a { color: var(--text-main); text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+        .contact-links a:hover { color: var(--primary); }
+        .copyright { color: var(--text-muted); font-size: 0.875rem; margin-top: 48px; }
+
+        /* Responsive tweaks */
+        @media (max-width: 768px) {
+            .hero-actions { flex-direction: column; align-items: center; }
+            .hero-actions .btn { width: 100%; max-width: 300px; text-align: center; }
+            section { padding: 60px 0; }
+            .highlight-box { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">Lyslle.</a>
+            <a href="mailto:hello@lyslle.com" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.875rem;">Contact Us</a>
+        </nav>
+    </div>
+
+    <header class="hero container">
+        <span class="tagline">Immutable. Replayable. Regulator-Ready.</span>
+        <h1>The Compliance Infrastructure for the Agentic Enterprise</h1>
+        <p class="lead">Lyslle is the black box recorder for AI agents in finance. We capture, archive, and replay the full reasoning context of every decision in a WORM-compliant graph.</p>
+        <div class="hero-actions">
+            <a href="mailto:hello@lyslle.com" class="btn">Talk to the Founders</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>The execution gap.</h2>
+            <div class="problem-quote">
+                "The SEC calls. Your AI agent made 10,000 trades last quarter. Can you explain a single one?"
+            </div>
+            <div class="grid-3">
+                <div>
+                    <h3>Agents scale instantly.</h3>
+                    <p style="color: var(--text-muted);">Agents trade, lend, and score risk faster than humans can supervise. 86% of financial firms expect major AI agent growth.</p>
+                </div>
+                <div>
+                    <h3>Oversight is blind.</h3>
+                    <p style="color: var(--text-muted);">Current tools log the output, not the reasoning. When regulators ask 'why,' no one has an answer.</p>
+                </div>
+                <div>
+                    <h3>Regulators are here.</h3>
+                    <p style="color: var(--text-muted);">SEC & FINRA classify AI as supervised technology. FINRA 24-09 mandates traceable AI decisions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>The flight recorder for AI.</h2>
+            <p class="lead" style="margin-left: 0; text-align: left;">Lyslle proves exactly why every decision was made.</p>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <span class="step-number">01 Capture</span>
+                    <h3>Real-time telemetry</h3>
+                    <p>Embedded in the agent execution path. Captures reasoning chains, policy evaluations, and overrides as they happen.</p>
+                </div>
+                <div class="card">
+                    <span class="step-number">02 Archive</span>
+                    <h3>Immutable graph</h3>
+                    <p>WORM-compliant temporal graph with cryptographic signing. Every decision becomes an SEC 17a-4 compliant artifact.</p>
+                </div>
+                <div class="card">
+                    <span class="step-number">03 Replay</span>
+                    <h3>Audit reconstruction</h3>
+                    <p>Full state reconstruction at any past moment. Regulators replay any decision exactly as it occurred.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="highlight-box">
+            <h2>Observability is debugging.<br>Lyslle is legal defense.</h2>
+            <p style="margin-top: 24px;">Observability tools tell you if your agent failed today. Lyslle proves to the SEC why your agent made a specific trade three years ago.</p>
+            <div style="margin-top: 40px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; color: #9ca3af; font-weight: 600;">
+                <span>✓ SEC Rule 17a-4(f)</span>
+                <span>✓ FINRA Rule 3110</span>
+                <span>✓ OCC SR 11-7</span>
+            </div>
+        </div>
+
+        <section>
+            <h2 style="text-align: center;">Four steps. Zero disruption.</h2>
+            <div class="grid-4">
+                <div class="card" style="padding: 32px 24px; text-align: center;">
+                    <span class="step-number">Step 01</span>
+                    <h3 style="font-size: 1.25rem;">Agent Executes</h3>
+                    <p style="font-size: 0.95rem;">AI agent makes a decision in trading, risk, or compliance.</p>
+                </div>
+                <div class="card" style="padding: 32px 24px; text-align: center;">
+                    <span class="step-number">Step 02</span>
+                    <h3 style="font-size: 1.25rem;">Lyslle Intercepts</h3>
+                    <p style="font-size: 0.95rem;">Embedded in execution path—zero latency, captures full context.</p>
+                </div>
+                <div class="card" style="padding: 32px 24px; text-align: center;">
+                    <span class="step-number">Step 03</span>
+                    <h3 style="font-size: 1.25rem;">Graph Archived</h3>
+                    <p style="font-size: 0.95rem;">Signed, timestamped, written to immutable WORM graph.</p>
+                </div>
+                <div class="card" style="padding: 32px 24px; text-align: center;">
+                    <span class="step-number">Step 04</span>
+                    <h3 style="font-size: 1.25rem;">Audit Replay</h3>
+                    <p style="font-size: 0.95rem;">Any decision fully reconstructed at any future moment.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align: center;">Why Not Build In-House?</h2>
+            <p class="lead" style="text-align: center;">The structural and technical impediments to internal compliance tools.</p>
+            <div class="grid-4">
+                <div class="card">
+                    <span class="step-number">01 Separation of Duties</span>
+                    <p>Under OCC SR 11-7, the team that builds AI agents cannot also validate their compliance. Regulators require an independent validator.</p>
+                </div>
+                <div class="card">
+                    <span class="step-number">02 The Focus Problem</span>
+                    <p>Compliance infrastructure is never a customer's core mission. Internal builds get deprioritized when revenue projects compete for engineers.</p>
+                </div>
+                <div class="card">
+                    <span class="step-number">03 Expertise Gap</span>
+                    <p>Requires deep knowledge of LLM architectures, WORM-compliant archival, temporal graphs, and the regulatory exam process.</p>
+                </div>
+                <div class="card">
+                    <span class="step-number">04 Regulatory Velocity</span>
+                    <p>Keeping up with FINRA 24-09, EU AI Act, and continuous regulatory updates requires singular focus.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="team-section">
+                <h2>Built by experts at the intersection of AI and compliance.</h2>
+                <p style="font-size: 1.2rem; color: var(--text-muted); margin-top: 16px;">Our team sits at the exact intersection of AI infrastructure and financial regulation compliance. We bring together a unique blend of builder experience and regulatory exam fluency.</p>
+                <ul class="team-list">
+                    <li><strong>AI Lineage & Infrastructure:</strong> Deep expertise building GenAI lineage infrastructure, model cataloging, and deployment tracking at <strong>Google DeepMind</strong>.</li>
+                    <li><strong>AI Strategy & Research:</strong> Experience developing AI-powered platforms in collaboration with <strong>OpenAI</strong> at <strong>Wharton</strong>, understanding both LLM agent capabilities and institutional requirements.</li>
+                    <li><strong>Financial Remediation:</strong> 15+ years leading financial systems transformation, navigating complex regulatory landscapes, and running compliance exam preparation for banks.</li>
+                    <li><strong>RegTech Archival:</strong> Proven background in building enterprise financial compliance infrastructure for regulated communications.</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <h2>Ready to secure your AI agents?</h2>
+            <div class="contact-links">
+                <a href="mailto:hello@lyslle.com">hello@lyslle.com</a>
+            </div>
+            <p class="copyright">&copy; 2026 Lyslle. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
